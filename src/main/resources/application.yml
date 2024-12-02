@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:5432/${DATA_BASE}
+    username: ${DATASOURCE_USER}
+    password: ${DATASOURCE_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+      idle-timeout: 60000
+      connection-timeout: 30000
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    show-sql: true
